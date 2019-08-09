@@ -1,0 +1,14 @@
+<div class="main-item-list">
+  <div class="category-container flex m-2">
+    <ng-container *ngFor="let mainItemCategory of this.mainItemCategoryList">
+      <button mat-stroked-button color="primary" class="rounded-button m-2">
+        {{ mainItemCategory.name }}
+      </button>
+    </ng-container>
+  </div>
+  <div class="item-list-container flex">
+    <ng-container *ngFor="let mainItem of this.mainItemList">
+      <ipos-main-item-card [mainItem]="mainItem" [width]="this.mainItemWidth" [height]="this.mainItemHeight"> </ipos-main-item-card>
+    </ng-container>
+  </div>
+</div>

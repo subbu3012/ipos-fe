@@ -1,0 +1,23 @@
+<div class="header-container flex space-between">
+  <p class="text--large text--bold">Choose Table</p>
+  <mat-icon color="primary" class="cursor-pointer" (click)="this.closeDialog()">close</mat-icon>
+</div>
+<div class="tables-container flex">
+  <ng-container
+    *ngFor="let table of this.tableList"
+    [ngTemplateOutlet]="tableCardTemplate"
+    [ngTemplateOutletContext]="{ table: table }"
+  ></ng-container>
+</div>
+
+<ng-template #tableCardTemplate let-table="table">
+  <div class="table-card-container text--center" [ngClass]="'status--' + table.status">
+    <div class="basic-info-container mt-1">
+      <p class="name text--semibold">{{ table.name }}</p>
+      <p class="lapsed-time">{{ table.lapsedTime }}..</p>
+    </div>
+    <div class="status-container">
+      <p class="status">{{ table.status }}..</p>
+    </div>
+  </div>
+</ng-template>

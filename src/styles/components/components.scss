@@ -1,0 +1,29 @@
+/** Generic component styles go here**/
+
+@import './material.scss';
+@import './ngx-bootstrap.scss';
+@import './../utilities/color-palette.scss';
+
+.table th {
+  color: #000088;
+  font-weight: normal;
+}
+
+.rounded-button {
+  border-radius: 24px !important;
+}
+
+button {
+  min-height: 36px !important;
+}
+
+.border {
+  &--warn {
+    border: 1px solid $app-warn !important;
+  }
+}
+
+agm-map .agm-info-window-content .table-container {
+  max-height: 150px;
+  overflow: auto;
+}

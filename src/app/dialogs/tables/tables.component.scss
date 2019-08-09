@@ -1,0 +1,48 @@
+@mixin table-status-moderator($color) {
+  border: 1px solid $color;
+
+  .lapsed-time,
+  .status {
+    color: $color;
+  }
+
+  .basic-info-container {
+    border-bottom: 1px solid $color;
+  }
+}
+
+.header-container {
+  height: 40px;
+  margin-bottom: 10px;
+  // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.table-card-container {
+  width: 100px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+  .basic-info-container {
+    height: 65px;
+    border-bottom: 1px solid grey;
+  }
+
+  .status-container {
+    height: 25px;
+    text-transform: capitalize;
+  }
+
+  &.status--ordering {
+    @include table-status-moderator(#ff8a00);
+  }
+
+  &.status--available {
+    @include table-status-moderator(#00d53c);
+  }
+
+  &.status--billing {
+    @include table-status-moderator(#1e7be8);
+  }
+}

@@ -1,0 +1,16 @@
+<div class="order-container flex">
+  <div class="main-item-lookup-container">
+    <div class="table-and-search-container flex space-between">
+      <button mat-stroked-button color="primary" class="rounded-button m-2" (click)="this.openTablesDialog()">
+        Tables
+      </button>
+      <input placeholder="Type to search food item" class="text--medium item-search-field form-control" />
+    </div>
+    <div class="main-item-list-container">
+      <ipos-main-item-list></ipos-main-item-list>
+    </div>
+  </div>
+  <div class="cart-container">
+    <ipos-cart></ipos-cart>
+  </div>
+</div>
