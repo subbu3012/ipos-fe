@@ -13,17 +13,52 @@
 
 .header-container {
   height: 40px;
-  margin-bottom: 10px;
-  // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.table-card-container {
+.status-container,
+.header-container .category-container {
+  p {
+    margin: 0 12px;
+  }
+}
+
+.status-container {
+  .text--ordering {
+    color: #ff8a00;
+  }
+
+  .text--available {
+    color: #00d53c;
+  }
+
+  .text--billing {
+    color: #1e7be8;
+  }
+}
+
+.table-card-container,
+.active-table-card-container {
   width: 100px;
   border: 1px solid grey;
   border-radius: 10px;
-  margin: 10px;
+  margin: 12px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
 
+.active-table-card-container {
+  border: none;
+  .basic-info-container {
+    height: 120px;
+    background-color: #ff8a00;
+    border-radius: inherit;
+
+    p {
+      margin: 2px 0;
+    }
+  }
+}
+
+.table-card-container {
   .basic-info-container {
     height: 65px;
     border-bottom: 1px solid grey;

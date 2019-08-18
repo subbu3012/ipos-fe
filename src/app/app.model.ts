@@ -29,7 +29,8 @@ export const TABLE_LIST: Table[] = [
     id: 2,
     name: 'Table 2',
     lapsedTime: '00m 00s',
-    status: 'available'
+    status: 'available',
+    active: true
   },
   {
     id: 3,
@@ -42,7 +43,6 @@ export const TABLE_LIST: Table[] = [
     name: 'Table 4',
     lapsedTime: '00m 00s',
     status: 'available',
-    active: true
   },
   {
     id: 5,

@@ -1,11 +1,21 @@
 <div class="header-container flex space-between">
-  <p class="text--large text--bold">Choose Table</p>
+  <div class="category-container flex justify-start">
+    <p class="text--largesecondary text--bold text--primary">Table</p>
+    <p class="text--large text--grey">Party hall</p>
+    <p class="text--large text--grey">Family room</p>
+  </div>
   <mat-icon color="primary" class="cursor-pointer" (click)="this.closeDialog()">close</mat-icon>
+</div>
+<hr />
+<div class="status-container flex justify-start m-2">
+  <p class="text--normal text--ordering">Ordering</p>
+  <p class="text--normal text--available">Available</p>
+  <p class="text--normal text--billing">Billing</p>
 </div>
 <div class="tables-container flex">
   <ng-container
     *ngFor="let table of this.tableList"
-    [ngTemplateOutlet]="tableCardTemplate"
+    [ngTemplateOutlet]="table.active ? activeTableCardTemplate : tableCardTemplate"
     [ngTemplateOutletContext]="{ table: table }"
   ></ng-container>
 </div>
@@ -13,11 +23,21 @@
 <ng-template #tableCardTemplate let-table="table">
   <div class="table-card-container text--center" [ngClass]="'status--' + table.status">
     <div class="basic-info-container mt-1">
-      <p class="name text--semibold">{{ table.name }}</p>
-      <p class="lapsed-time">{{ table.lapsedTime }}..</p>
+      <p class="name text--semibold text--mediumsecondary">{{ table.name }}</p>
+      <p class="lapsed-time text--mediumsecondary">{{ table.lapsedTime }}..</p>
     </div>
     <div class="status-container">
-      <p class="status">{{ table.status }}..</p>
+      <p class="status text--mediumsecondary">{{ table.status }}..</p>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #activeTableCardTemplate let-table="table">
+  <div class="active-table-card-container">
+    <div class="basic-info-container flex direction-column">
+      <p class="name text--semibold text--mediumsecondary">{{ table.name }}</p>
+      <p class="text--white text--mediumsecondary">Split</p>
+      <p class="text--white text--mediumsecondary">Merge</p>
     </div>
   </div>
 </ng-template>
