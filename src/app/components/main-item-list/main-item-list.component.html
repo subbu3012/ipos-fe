@@ -1,7 +1,13 @@
 <div class="main-item-list">
   <div class="category-container flex m-2">
     <ng-container *ngFor="let mainItemCategory of this.mainItemCategoryList">
-      <button mat-stroked-button color="primary" class="rounded-button m-2">
+      <button
+        mat-stroked-button
+        color="primary"
+        class="rounded-button m-2"
+        (click)="this.activeMainCategory = mainItemCategory.id"
+        [class.active]="this.activeMainCategory == mainItemCategory.id"
+      >
         {{ mainItemCategory.name }}
       </button>
     </ng-container>

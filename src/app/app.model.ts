@@ -82,8 +82,8 @@ export const TABLE_LIST: Table[] = [
   }
 ];
 
-export const MAIN_ITEM_WIDTH = '95px';
-export const MAIN_ITEM_HEIGHT = '90px';
+export const MAIN_ITEM_WIDTH = '90px';
+export const MAIN_ITEM_HEIGHT = '85px';
 
 export const MAIN_ITEM_CATEGORY_LIST: MainItemCategory[] = [
   {

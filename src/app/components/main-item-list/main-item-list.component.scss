@@ -1,0 +1,12 @@
+@import './../../../styles/utilities/color-palette.scss';
+
+.main-item-list {
+  .category-container {
+    button {
+      border: none;
+    }
+    button.active {
+      border: 1px solid $app-primary;
+    }
+  }
+}

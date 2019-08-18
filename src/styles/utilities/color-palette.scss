@@ -3,35 +3,35 @@
 $dark-primary-text: rgba(black, 0.87);
 $light-primary-text: white;
 $ipos-client-primary: (
-  50 : #fbe5e1,
-  100 : #f5bdb4,
-  200 : #ef9182,
-  300 : #e8654f,
-  400 : #e3442a,
-  500 : #de2304,
-  600 : #da1f03,
-  700 : #d51a03,
-  800 : #d11502,
-  900 : #c80c01,
-  A100 : #fff1f1,
-  A200 : #ffbfbe,
-  A400 : #ff8d8b,
-  A700 : #ff7471,
+  50: #fbe5e1,
+  100: #f5bdb4,
+  200: #ef9182,
+  300: #e8654f,
+  400: #e3442a,
+  500: #de2304,
+  600: #da1f03,
+  700: #d51a03,
+  800: #d11502,
+  900: #c80c01,
+  A100: #fff1f1,
+  A200: #ffbfbe,
+  A400: #ff8d8b,
+  A700: #ff7471,
   contrast: (
-      50 : #000000,
-      100 : #000000,
-      200 : #000000,
-      300 : #000000,
-      400 : #ffffff,
-      500 : #ffffff,
-      600 : #ffffff,
-      700 : #ffffff,
-      800 : #ffffff,
-      900 : #ffffff,
-      A100 : #000000,
-      A200 : #000000,
-      A400 : #000000,
-      A700 : #000000,
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
   )
 );
 
@@ -68,6 +68,6 @@ $ipos-client-accent: (
   )
 );
 
-$app-primary-background: #a1ebeb;
+$app-primary-background: #9f0000;
 $app-primary: #de2304;
 $app-warn: red;

@@ -18,6 +18,7 @@ export class MainItemListComponent implements OnInit {
   public mainItemList: MainItem[] = MAIN_ITEM_LOOPED_LIST;
   public mainItemWidth: string = MAIN_ITEM_WIDTH;
   public mainItemHeight: string = MAIN_ITEM_HEIGHT;
+  public activeMainCategory = 3;
 
   constructor() {}
 
