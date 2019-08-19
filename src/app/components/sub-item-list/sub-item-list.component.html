@@ -1,0 +1,5 @@
+<div class="sub-item-list-container flex">
+  <ng-container *ngFor="let subItem of this.subItemList">
+    <ipos-sub-item-card [subItem]="subItem" [width]="this.subItemWidth" [height]="this.subItemHeight"></ipos-sub-item-card>
+  </ng-container>
+</div>

@@ -1,0 +1,29 @@
+.sub-item-card {
+  margin: 10px 20px;
+  padding: 8px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 4px;
+  position: relative;
+
+  .name-container {
+    height: 70%;
+  }
+  .info-container {
+    height: 30%;
+  }
+
+  .item-count-container {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    border-width: 2px;
+    border-style: solid;
+    background: #ffffff;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}

@@ -7,6 +7,8 @@ import {
   MainItemCategory,
   MAIN_ITEM_CATEGORY_LIST
 } from './../../app.model';
+import { MatDialog } from '@angular/material/dialog';
+import { SubItemsComponent } from './../../dialogs/sub-items/sub-items.component';
 
 @Component({
   selector: 'ipos-main-item-list',
@@ -20,7 +22,14 @@ export class MainItemListComponent implements OnInit {
   public mainItemHeight: string = MAIN_ITEM_HEIGHT;
   public activeMainCategory = 3;
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {
+  }
 
   ngOnInit() {}
+
+  openSubItemDialog(mainItem?: MainItem): void {
+    this.dialog.open(SubItemsComponent, {
+      width: '700px'
+    });
+  }
 }

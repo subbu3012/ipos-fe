@@ -1,0 +1,18 @@
+<div
+  class="sub-item-card"
+  [style.width]="this.width"
+  [style.height]="this.height"
+  [style.border-color]="this.subItem.count > 0 ? (this.subItem.type == 1 ? '#00D53C' : '#FF0000') : '#C4C4C4'"
+  (swipeleft)="swipe($event, 'start')"
+>
+  <div class="name-container">
+    <p class="title text--medium text--bold spaced-letters">{{ this.subItem.name }}</p>
+  </div>
+  <div class="info-container flex space-between width-100">
+    <img [attr.src]="'assets/images/sub-items/' + (this.subItem.type == 1 ? 'green' : 'red') + '.svg'" alt="item type" />
+    <p class="title text--mediumsecondary text--bold spaced-letters">{{ this.subItem.price | number: '.2-2' }}</p>
+  </div>
+  <div *ngIf="this.subItem.count > 0" class="item-count-container" [style.border-color]="this.subItem.type == 1 ? '#00D53C' : '#FF0000'">
+    <span>{{ this.subItem.count }}</span>
+  </div>
+</div>

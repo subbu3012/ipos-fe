@@ -9,6 +9,13 @@ export interface MainItem {
   name: string;
   imagePath: string;
 }
+export interface SubItem {
+  id: number;
+  name: string;
+  price: number;
+  type: number;
+  count?: number;
+}
 
 export interface Table {
   id: number;
@@ -17,6 +24,71 @@ export interface Table {
   status: string;
   active?: boolean;
 }
+
+export const MAIN_ITEM_WIDTH = '90px';
+export const MAIN_ITEM_HEIGHT = '85px';
+
+export const SUB_ITEM_WIDTH = '150px';
+export const SUB_ITEM_HEIGHT = '75px';
+
+export const SUB_ITEM_LIST: SubItem[] = [
+  {
+    id: 1,
+    name: 'Veggie Burger',
+    price: 20.0,
+    type: 1,
+    count: 1
+  },
+  {
+    id: 2,
+    name: 'Veggie Bean Burger',
+    price: 30.0,
+    type: 1
+  },
+  {
+    id: 3,
+    name: 'Beef Burger',
+    price: 20.0,
+    type: 2
+  },
+  {
+    id: 4,
+    name: 'Fish Burger',
+    price: 35.0,
+    type: 2
+  },
+  {
+    id: 5,
+    name: 'Peri Peri Chicken Burger',
+    price: 30.0,
+    type: 2,
+    count: 2
+  },
+  {
+    id: 6,
+    name: 'Fried Chicken Burger',
+    price: 25.0,
+    type: 2
+  },
+  {
+    id: 7,
+    name: 'Aubergine Burger',
+    price: 20,
+    type: 1
+  },
+  {
+    id: 8,
+    name: 'Chapil Kebab Burger',
+    price: 30.0,
+    type: 2
+  },
+  {
+    id: 9,
+    name: 'Halloumi Burger',
+    price: 25.0,
+    type: 1
+  }
+];
 
 export const TABLE_LIST: Table[] = [
   {
@@ -42,7 +114,7 @@ export const TABLE_LIST: Table[] = [
     id: 4,
     name: 'Table 4',
     lapsedTime: '00m 00s',
-    status: 'available',
+    status: 'available'
   },
   {
     id: 5,
@@ -81,9 +153,6 @@ export const TABLE_LIST: Table[] = [
     status: 'available'
   }
 ];
-
-export const MAIN_ITEM_WIDTH = '90px';
-export const MAIN_ITEM_HEIGHT = '85px';
 
 export const MAIN_ITEM_CATEGORY_LIST: MainItemCategory[] = [
   {

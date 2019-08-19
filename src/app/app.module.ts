@@ -15,6 +15,12 @@ import { MatButtonModule, MatDialogModule, MatIconModule } from '@angular/materi
 import { CartComponent } from './components/cart/cart.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SubItemListComponent } from './components/sub-item-list/sub-item-list.component';
+import { SubItemCardComponent } from './components/sub-item-card/sub-item-card.component';
+import { SubItemsComponent } from './dialogs/sub-items/sub-items.component';
+
+import 'hammerjs';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,11 +30,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MainItemListComponent,
     MainItemCardComponent,
     NavbarComponent,
-    CartComponent
+    CartComponent,
+    SubItemListComponent,
+    SubItemCardComponent,
+    SubItemsComponent
   ],
   imports: [BrowserModule, AppRoutingModule, MatButtonModule, MatDialogModule, MatIconModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [TablesComponent]
+  entryComponents: [TablesComponent, SubItemsComponent]
 })
 export class AppModule {}
