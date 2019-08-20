@@ -35,6 +35,10 @@
   flex-direction: column;
 }
 
+.align-stretch {
+  align-items: stretch;
+}
+
 .align-center-mauto {
   display: block;
   margin-left: auto;

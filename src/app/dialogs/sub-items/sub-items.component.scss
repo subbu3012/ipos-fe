@@ -1,9 +1,26 @@
 .header-container {
-  height: 40px;
+  min-height: 40px;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 4px;
 }
 
 .header-container .category-container {
   p {
     margin: 0 12px;
+  }
+}
+
+.details-container {
+  height: 500px;
+  .sub-items-container {
+    width: 62%;
+    height: 100%;
+    border-right: 1px solid lightgrey;
+    padding-top: 12px
+  }
+
+  .cart-container {
+    width: 38%;
+    height: 100%;
   }
 }

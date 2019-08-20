@@ -11,6 +11,11 @@
     </div>
   </div>
   <div class="cart-container">
-    <ipos-cart></ipos-cart>
+    <div class="header-container flex space-between">
+      <span>&nbsp;</span>
+      <p class="text--xlarge">Billing</p>
+      <img src="assets/images/navbar/scanner.svg" alt="Customer avatar" class="customer-avatar" />
+    </div>
+    <ipos-cart [source]="'order'" [cartItemList]="this.cartItemList"></ipos-cart>
   </div>
 </div>

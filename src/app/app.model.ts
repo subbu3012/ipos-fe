@@ -15,6 +15,7 @@ export interface SubItem {
   price: number;
   type: number;
   count?: number;
+  active?: boolean;
 }
 
 export interface Table {
@@ -28,8 +29,56 @@ export interface Table {
 export const MAIN_ITEM_WIDTH = '90px';
 export const MAIN_ITEM_HEIGHT = '85px';
 
-export const SUB_ITEM_WIDTH = '150px';
-export const SUB_ITEM_HEIGHT = '75px';
+export const SUB_ITEM_WIDTH = '130px';
+export const SUB_ITEM_HEIGHT = '65px';
+
+export const SUB_ITEM_CART_ITEM_LIST: SubItem[] = [
+  {
+    id: 1,
+    name: 'Veggie Burger',
+    price: 20.0,
+    type: 1,
+    count: 1
+  },
+  {
+    id: 5,
+    name: 'Potato Wedges',
+    price: 30.0,
+    type: 2,
+    count: 3
+  },
+  {
+    id: 7,
+    name: 'et 300ml',
+    price: 20,
+    type: 1,
+    count: 2
+  }
+];
+
+export const ORDER_CART_ITEM_LIST: SubItem[] = [
+  {
+    id: 1,
+    name: 'Veggie Burger',
+    price: 20.0,
+    type: 1,
+    count: 1
+  },
+  {
+    id: 5,
+    name: 'Peri Peri Chicken Burger',
+    price: 30.0,
+    type: 2,
+    count: 3
+  },
+  {
+    id: 7,
+    name: 'Aubergine Burger',
+    price: 20,
+    type: 1,
+    count: 2
+  }
+];
 
 export const SUB_ITEM_LIST: SubItem[] = [
   {

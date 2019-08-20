@@ -53,5 +53,11 @@
     height: 100%;
     overflow-y: auto;
     box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.05);
+
+    .header-container {
+      height: 56px;
+      border-bottom: 1px solid lightgrey;
+      padding: 0 24px;
+    }
   }
 }

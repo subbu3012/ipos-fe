@@ -14,8 +14,4 @@ export class SubItemCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-
-  swipe(e: TouchEvent, when: string): void {
-    console.log('when', when);
-  }
 }

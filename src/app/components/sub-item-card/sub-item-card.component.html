@@ -3,7 +3,6 @@
   [style.width]="this.width"
   [style.height]="this.height"
   [style.border-color]="this.subItem.count > 0 ? (this.subItem.type == 1 ? '#00D53C' : '#FF0000') : '#C4C4C4'"
-  (swipeleft)="swipe($event, 'start')"
 >
   <div class="name-container">
     <p class="title text--medium text--bold spaced-letters">{{ this.subItem.name }}</p>

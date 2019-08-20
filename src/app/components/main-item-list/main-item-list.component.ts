@@ -5,7 +5,7 @@ import {
   MAIN_ITEM_WIDTH,
   MAIN_ITEM_HEIGHT,
   MainItemCategory,
-  MAIN_ITEM_CATEGORY_LIST
+  MAIN_ITEM_CATEGORY_LIST,
 } from './../../app.model';
 import { MatDialog } from '@angular/material/dialog';
 import { SubItemsComponent } from './../../dialogs/sub-items/sub-items.component';
@@ -23,13 +23,16 @@ export class MainItemListComponent implements OnInit {
   public activeMainCategory = 3;
 
   constructor(public dialog: MatDialog) {
+    setTimeout(() => {
+      this.openSubItemDialog();
+    }, 0);
   }
 
   ngOnInit() {}
 
   openSubItemDialog(mainItem?: MainItem): void {
     this.dialog.open(SubItemsComponent, {
-      width: '700px'
+      width: '950px'
     });
   }
 }
