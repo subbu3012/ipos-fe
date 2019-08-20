@@ -12,10 +12,12 @@
   </div>
   <div class="cart-container">
     <div class="header-container flex space-between">
-      <span>&nbsp;</span>
-      <p class="text--xlarge">Billing</p>
+      <img src="assets/images/cart/delete.svg" alt="add" />
+      <p class="text--xlarge flex">Billing <span class="order-count text--white text--mediumsecondary ml-1">03</span></p>
       <img src="assets/images/navbar/scanner.svg" alt="Customer avatar" class="customer-avatar" />
     </div>
-    <ipos-cart [source]="'order'" [cartItemList]="this.cartItemList"></ipos-cart>
+    <div class="cart-component-container">
+      <ipos-cart [source]="'order'" [cartItemList]="this.cartItemList"></ipos-cart>
+    </div>
   </div>
 </div>

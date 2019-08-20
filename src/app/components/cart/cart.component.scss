@@ -28,13 +28,19 @@
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .actions {
+        .actions-container {
           width: 20%;
+          border-radius: 4px;
+          border: 1px solid rgba(255, 0, 0, 0.38);;
 
           .action {
-            border: 1px solid rgba(255, 0, 0, 0.38);;
+            border: 1px solid rgba(255, 0, 0, 0.38);
             padding: 0 4px;
           }
+        }
+
+        &.item--active {
+          border-color: rgba(255, 0, 0, 0.38);
         }
       }
     }

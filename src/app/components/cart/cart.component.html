@@ -5,17 +5,24 @@
         class="cart-item-container width-100 flex space-between"
         *ngFor="let subItem of this.cartItemList"
         (swipeleft)="subItem.active = true"
+        (click)="subItem.active = false"
+        [class.item--active]="subItem.active"
       >
-        <p class="width-50 text--semibold" (click)= "subItem.active = false">{{ subItem.name }}</p>
+        <p class="width-50 text--semibold">{{ subItem.name }}</p>
         <p>{{ subItem.count }}</p>
         <p>{{ subItem.price | number: '.2-2' }}</p>
-        <div *ngIf="subItem.active" class="flex actions">
-          <span class="action">
-            <img src="assets/images/cart/add.svg" alt="add" />
-          </span>
-          <span class="action">
-            <img src="assets/images/cart/subtract.svg" alt="subtract" />
-          </span>
+        <div *ngIf="subItem.active" class="actions-container flex direction-column text--center">
+          <div *ngIf="this.source == 'order'" class="width-100 action p-1">
+            <p class="text--primary">Delete</p>
+          </div>
+          <div class="flex width-100">
+            <span class="action width-50">
+              <img src="assets/images/cart/add.svg" alt="add" />
+            </span>
+            <span class="action width-50">
+              <img src="assets/images/cart/subtract.svg" alt="subtract" />
+            </span>
+          </div>
         </div>
       </div>
     </div>

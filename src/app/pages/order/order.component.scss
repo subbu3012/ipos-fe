@@ -58,6 +58,16 @@
       height: 56px;
       border-bottom: 1px solid lightgrey;
       padding: 0 24px;
+
+      .order-count {
+        background: $app-primary-background;
+        padding: 4px;
+        border-radius: 12px;
+      }
+    }
+
+    .cart-component-container {
+      height: calc(100% - 56px);
     }
   }
 }
