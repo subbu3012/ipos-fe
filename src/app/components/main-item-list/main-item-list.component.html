@@ -4,11 +4,11 @@
       <button
         mat-stroked-button
         color="primary"
-        class="rounded-button m-2 text--bold spaced-letters"
+        class="rounded-button m-2 spaced-letters"
         (click)="this.activeMainCategory = mainItemCategory.id"
         [class.active]="this.activeMainCategory == mainItemCategory.id"
       >
-        {{ mainItemCategory.name }}
+        <span class="text--bold">{{ mainItemCategory.name }}</span>
       </button>
     </ng-container>
   </div>
