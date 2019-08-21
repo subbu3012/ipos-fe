@@ -16,6 +16,12 @@ export interface SubItem {
   type: number;
   count?: number;
   active?: boolean;
+  childItemList?: ChildItem[];
+}
+
+export interface ChildItem {
+  id: number;
+  name: string;
 }
 
 export interface Table {
@@ -65,18 +71,33 @@ export const ORDER_CART_ITEM_LIST: SubItem[] = [
     count: 1
   },
   {
-    id: 5,
-    name: 'Peri Peri Chicken Burger',
+    id: 2,
+    name: 'Chapil Burger - Meal',
     price: 30.0,
     type: 2,
-    count: 3
+    count: 1,
+    childItemList: [
+      {
+        id: 1,
+        name: 'Chapil Kebab Burger - 1'
+      },
+      {
+        id: 2,
+        name: 'Portion of potato wedges - 1'
+      },
+      {
+        id: 1,
+        name: 'Mountain dew 300ML - 1'
+      }
+    ]
   },
   {
-    id: 7,
-    name: 'Aubergine Burger',
+    id: 3,
+    name: 'et 300ml',
     price: 20,
     type: 1,
-    count: 2
+    count: 2,
+    active: true
   }
 ];
 

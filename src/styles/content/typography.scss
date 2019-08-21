@@ -93,6 +93,10 @@ p {
   &--semibold {
     font-weight: 500;
   }
+
+  &--numeric {
+    font-family: Lato !important;
+  }
 }
 
 .spaced-letters {

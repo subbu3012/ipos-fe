@@ -4,7 +4,7 @@
       <button
         mat-stroked-button
         color="primary"
-        class="rounded-button m-2"
+        class="rounded-button m-2 text--bold spaced-letters"
         (click)="this.activeMainCategory = mainItemCategory.id"
         [class.active]="this.activeMainCategory == mainItemCategory.id"
       >
@@ -18,8 +18,7 @@
         [mainItem]="mainItem"
         [width]="this.mainItemWidth"
         [height]="this.mainItemHeight"
-        (click)="this.openSubItemDialog(mainItem)"
-        class="cursor-pointer"
+        (onMainItemClicked)="this.openSubItemDialog(mainItem)"
       >
       </ipos-main-item-card>
     </ng-container>

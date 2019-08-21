@@ -1,8 +1,9 @@
 <div
-  class="main-item-card flex"
+  class="main-item-card flex cursor-pointer"
   [style.backgroundImage]="'url(assets/images/main-items/' + this.mainItem?.imagePath + ')'"
   [style.width]="this.width"
   [style.height]="this.height"
+  (click)="this.mainItemClicked(mainItem.id)"
 >
   <div class="image-tint" [style.width]="this.width" [style.height]="this.height"></div>
   <p class="title text--normal text--bold text--white spaced-letters">{{ this.mainItem?.name }}</p>

@@ -5,12 +5,17 @@
         class="cart-item-container width-100 flex space-between"
         *ngFor="let subItem of this.cartItemList"
         (swipeleft)="subItem.active = true"
-        (click)="subItem.active = false"
+        (click)="subItem.active = !subItem.active"
         [class.item--active]="subItem.active"
       >
-        <p class="width-50 text--semibold">{{ subItem.name }}</p>
-        <p>{{ subItem.count }}</p>
-        <p>{{ subItem.price | number: '.2-2' }}</p>
+        <div class="sub-item-info-container width-70" [class.width-60]="subItem.active">
+          <p class="text--bold text--mediumsecondary">{{ subItem.name }}</p>
+          <div class="child-item-info-container pl-2 mt-1">
+            <p *ngFor="let childItem of subItem.childItemList" class="text--grey text--medium">{{ childItem.name }}</p>
+          </div>
+        </div>
+        <p class="text--numeric">{{ subItem.count }}</p>
+        <p class="text--numeric">{{ subItem.price | number: '.2-2' }}</p>
         <div *ngIf="subItem.active" class="actions-container flex direction-column text--center">
           <div *ngIf="this.source == 'order'" class="width-100 action p-1">
             <p class="text--primary">Delete</p>
@@ -33,22 +38,23 @@
     >
       <div class="cost-container width-100">
         <div *ngIf="this.source == 'order'" class="sub-cost-container flex width-100 space-between">
-          <p class="width-50 text--semibold text--primary">Sub Total</p>
-          <p>1</p>
-          <p class="text--primary">90.00</p>
+          <p class="width-70 text--bold text--primary text--bold">Sub Total</p>
+          <p class="text--numeric">1</p>
+          <p class="text--primary text--numeric">90.00</p>
         </div>
         <div *ngIf="this.source == 'order'" class="sub-cost-container flex width-100 space-between">
-          <p class="width-50 text--semibold">Vat Tax</p>
-          <p>12%</p>
-          <p>10.80</p>
+          <p class="width-70 text--bold">Vat Tax</p>
+          <p class="text--numeric">12%</p>
+          <p class="text--numeric">10.80</p>
         </div>
       </div>
 
       <div class="pay-container width-100">
         <button mat-flat-button color="primary" class="button--pay rounded-button mt-4 width-100">
-          <div class="flex space-between">
-            <p class="text--semibold text--left">{{ this.source == 'order' ? 'Pay Now' : 'Add' }}</p>
-            <p>Total&nbsp;&nbsp;&nbsp;100.80</p>
+          <div class="flex space-between text--bold">
+            <p class="text--bold text--left width-70" [class.width-60] = "this.source == 'subItemDialog'">{{ this.source == 'order' ? 'Pay Now' : 'Add' }}</p>
+            <p>Total</p>
+            <p class="text--numeric">100.80</p>
           </div>
         </button>
       </div>
