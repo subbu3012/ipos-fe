@@ -23,7 +23,7 @@
 <ng-template #tableCardTemplate let-table="table">
   <div class="table-card-container text--center" [ngClass]="'status--' + table.status">
     <div class="basic-info-container mt-1">
-      <p class="name text--semibold text--mediumsecondary">{{ table.name }}</p>
+      <p class="name text--bold text--mediumsecondary">{{ table.name }}</p>
       <p class="lapsed-time text--mediumsecondary">{{ table.lapsedTime }}..</p>
     </div>
     <div class="status-container">
@@ -35,7 +35,7 @@
 <ng-template #activeTableCardTemplate let-table="table">
   <div class="active-table-card-container">
     <div class="basic-info-container flex direction-column">
-      <p class="name text--semibold text--mediumsecondary">{{ table.name }}</p>
+      <p class="name text--bold text--mediumsecondary">{{ table.name }}</p>
       <p class="text--white text--mediumsecondary">Split</p>
       <p class="text--white text--mediumsecondary">Merge</p>
     </div>

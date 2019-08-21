@@ -87,11 +87,7 @@ p {
   }
 
   &--bold {
-    font-weight: bold;
-  }
-
-  &--semibold {
-    font-weight: 500;
+    font-family: Raleway-semibold !important;
   }
 
   &--numeric {

@@ -13,4 +13,12 @@ export class CartComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  public cartItemClicked(cartItem) {
+    let activeStatus = cartItem.active;
+    this.cartItemList.forEach(cartItem => {
+      cartItem.active = false;
+    });
+    cartItem.active = !activeStatus;
+  }
 }

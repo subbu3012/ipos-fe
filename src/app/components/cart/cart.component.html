@@ -3,20 +3,20 @@
     <div class="cart-item-list-container width-100 text--mediumsecondary">
       <div
         class="cart-item-container width-100 flex space-between"
-        *ngFor="let subItem of this.cartItemList"
-        (swipeleft)="subItem.active = true"
-        (click)="subItem.active = !subItem.active"
-        [class.item--active]="subItem.active"
+        *ngFor="let cartItem of this.cartItemList"
+        (swipeleft)="cartItem.active = true"
+        (click)="this.cartItemClicked(cartItem)"
+        [class.item--active]="cartItem.active"
       >
-        <div class="sub-item-info-container width-70" [class.width-60]="subItem.active">
-          <p class="text--bold text--mediumsecondary">{{ subItem.name }}</p>
+        <div class="sub-item-info-container width-70" [class.width-60]="cartItem.active">
+          <p class="text--bold text--mediumsecondary">{{ cartItem.name }}</p>
           <div class="child-item-info-container pl-2 mt-1">
-            <p *ngFor="let childItem of subItem.childItemList" class="text--grey text--medium">{{ childItem.name }}</p>
+            <p *ngFor="let childItem of cartItem.childItemList" class="text--grey text--medium">{{ childItem.name }}</p>
           </div>
         </div>
-        <p class="text--numeric">{{ subItem.count }}</p>
-        <p class="text--numeric">{{ subItem.price | number: '.2-2' }}</p>
-        <div *ngIf="subItem.active" class="actions-container flex direction-column text--center">
+        <p class="text--numeric">{{ cartItem.count }}</p>
+        <p class="text--numeric">{{ cartItem.price | number: '.2-2' }}</p>
+        <div *ngIf="cartItem.active" class="actions-container flex direction-column text--center">
           <div *ngIf="this.source == 'order'" class="width-100 action p-1">
             <p class="text--primary">Delete</p>
           </div>
