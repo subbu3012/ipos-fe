@@ -16,7 +16,7 @@ export class MainItemCardComponent implements OnInit {
 
   ngOnInit() {}
 
-  public mainItemClicked() {
+  public mainItemClicked(mainItemId) {
     this.onMainItemClicked.emit();
   }
 }
