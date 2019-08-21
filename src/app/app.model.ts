@@ -40,6 +40,42 @@ export interface PaymentMethod {
   active?: boolean;
 }
 
+export interface Customer {
+  id: number;
+  name: string;
+  phone: string;
+  location: string;
+  active?: boolean;
+}
+
+export const CUSTOMER_LIST: Customer[] = [
+  {
+    id: 1,
+    name: 'Basi Babu',
+    phone: '888-771-2244',
+    location: 'Dubai'
+  },
+  {
+    id: 2,
+    name: 'John Doe',
+    phone: '888-771-2244',
+    location: 'New York, U.S.'
+  },
+  {
+    id: 3,
+    name: 'Binoy Rasool',
+    phone: '888-771-2244',
+    location: 'Calicut, India',
+    active: true
+  },
+  {
+    id: 4,
+    name: 'Nadeem Mamood',
+    phone: '888-771-2244',
+    location: 'Dubai'
+  }
+];
+
 export const PAYMENT_METHODS: PaymentMethod[] = [
   {
     id: 1,

@@ -3,9 +3,65 @@
 }
 
 .body-container {
-  height: 400px;
-  max-height: 400px;
+  height: calc(100% - 80px);
+  max-height: calc(100% - 80px);
   overflow: auto;
+
+  .table-header-container,
+  .table-body-container .table-body-data {
+    padding: 0 12px;
+  }
+
+  .table-header-container {
+    border-bottom: 1px solid #efefef;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  .table-body-block:nth-child(even) .table-body-data {
+    background: #f8f8f8;
+  }
+
+  .table-body-block .table-body-data {
+    height: 40px;
+    border-radius: 4px;
+
+    &.active {
+      background: #b80101;
+      color: #ffffff;
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+
+    button {
+      height: 24px;
+      margin: 0;
+      padding: 0;
+      width: 80px;
+    }
+  }
+
+  .table-body-data-extra {
+    padding: 16px;
+    background: #fff2f2;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+    button {
+      background: rgba(255, 0, 0, 0.1);
+      border: 1px solid rgba(255, 0, 0, 0.38);
+      border-radius: 5px;
+      color: #9f0000;
+      height: 24px;
+      margin: 0;
+      padding: 0;
+      width: 100px;
+    }
+  }
+  .dummy-dp-container {
+    border: 2px solid #9f0000;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+  }
 }
 
 .footer-container {

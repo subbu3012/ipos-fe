@@ -30,7 +30,7 @@ export class CartComponent implements OnInit {
 
   openCustomersDialog(): void {
     this.dialog.open(CustomersComponent, {
-      width: '700px'
+      width: '800px'
     });
   }
 }
