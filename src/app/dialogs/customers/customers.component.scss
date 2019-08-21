@@ -1,0 +1,19 @@
+.header-container {
+  height: 40px;
+}
+
+.body-container {
+  height: 400px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.footer-container {
+  height: 40px;
+
+  button {
+    background: rgba(255, 0, 0, 0.1);
+    border-radius: 5px;
+    border: none;
+  }
+}

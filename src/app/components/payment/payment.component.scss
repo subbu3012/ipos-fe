@@ -1,0 +1,50 @@
+.payment-container {
+  height: 100%;
+  .cash-container {
+    height: 85%;
+    max-height: 85%;
+    overflow: auto;
+    padding: 12px 5%;
+
+    .payment-methods-container {
+      .methods-container .method-block {
+        .method-info {
+          margin: 10px 10%;
+          border: 1px solid lightgrey;
+          height: 95px;
+          border-radius: 10px;
+
+          &.active {
+            box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.38);
+            border-radius: 10px;
+            background-color: #b80101;
+            border-color: #b80101;
+          }
+        }
+      }
+    }
+    .cash-info-container {
+      .cash-block {
+        height: 40px;
+        border: 2px solid #efefef;
+        border-radius: 4px;
+        margin: 5px 0;
+        padding: 0 12px;
+      }
+    }
+  }
+
+  .action-container {
+    height: 15%;
+    max-height: 15%;
+    overflow: auto;
+
+    .button--pay {
+      background: linear-gradient(180deg, #ff0000 0%, #b80101 100%);
+      border-radius: 5px !important;
+      height: 48px;
+      padding: 4px 20px;
+      text-align: center;
+    }
+  }
+}

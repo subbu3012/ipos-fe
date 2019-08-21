@@ -50,6 +50,10 @@ p {
     font-size: 28px;
   }
 
+  &--xxxlarge {
+    font-size: 48px;
+  }
+
   &--trim--200 {
     max-width: 200px;
   }
@@ -70,16 +74,13 @@ p {
     text-align: right !important;
   }
 
-  &--orange {
-    color: #eb5821e0;
-  }
 
   &--green {
-    color: #08b5ae;
+    color: #00D53C;
   }
 
-  &--blue {
-    color: #000088;
+  &--red {
+    color: #B80101;
   }
 
   &--right {
@@ -97,10 +98,6 @@ p {
 
 .spaced-letters {
   letter-spacing: 0.75px;
-}
-
-.background--blue {
-  background-color: #f5fcfe;
 }
 
 .tag {

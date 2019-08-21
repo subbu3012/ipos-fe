@@ -26,7 +26,7 @@ export class MainItemListComponent implements OnInit {
 
   ngOnInit() {}
 
-  openSubItemDialog(mainItem?: MainItem): void {
+  public openSubItemDialog(mainItem?: MainItem): void {
     this.dialog.open(SubItemsComponent, {
       width: '950px'
     });

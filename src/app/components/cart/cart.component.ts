@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SubItem } from './../../app.model';
+import { MatDialog } from '@angular/material/dialog';
+import { CustomersComponent } from './../../dialogs/customers/customers.component';
 
 @Component({
   selector: 'ipos-cart',
@@ -10,7 +12,11 @@ export class CartComponent implements OnInit {
   @Input() source: string;
   @Input() cartItemList: SubItem[];
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {
+    setTimeout(() => {
+      this.openCustomersDialog();
+    }, 0);
+  }
 
   ngOnInit() {}
 
@@ -20,5 +26,11 @@ export class CartComponent implements OnInit {
       cartItem.active = false;
     });
     cartItem.active = !activeStatus;
+  }
+
+  openCustomersDialog(): void {
+    this.dialog.open(CustomersComponent, {
+      width: '700px'
+    });
   }
 }

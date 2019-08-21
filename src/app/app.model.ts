@@ -32,6 +32,42 @@ export interface Table {
   active?: boolean;
 }
 
+export interface PaymentMethod {
+  id: number;
+  name: string;
+  description: string;
+  imagePath: string;
+  active?: boolean;
+}
+
+export const PAYMENT_METHODS: PaymentMethod[] = [
+  {
+    id: 1,
+    name: 'cash',
+    description: 'Cash',
+    imagePath: 'cash',
+    active: true
+  },
+  {
+    id: 2,
+    name: 'card',
+    description: 'Credit Card',
+    imagePath: 'card'
+  },
+  {
+    id: 3,
+    name: 'foreign',
+    description: 'Foreign CCY',
+    imagePath: 'foreign'
+  },
+  {
+    id: 4,
+    name: 'others',
+    description: 'Other Providers',
+    imagePath: 'others'
+  }
+];
+
 export const MAIN_ITEM_WIDTH = '90px';
 export const MAIN_ITEM_HEIGHT = '85px';
 

@@ -1,0 +1,23 @@
+<div class="pay-container flex">
+  <div class="cart-container">
+    <div class="header-container flex space-between">
+      <img src="assets/images/cart/back.svg" alt="Customer avatar" class="customer-avatar" />
+      <p class="text--xlarge flex">Billing <span class="order-count text--white text--mediumsecondary ml-1 text--numeric">03</span></p>
+      <span>&nbsp;</span>
+    </div>
+    <div class="cart-component-container">
+      <ipos-cart [source]="'order'" [cartItemList]="this.cartItemList"></ipos-cart>
+    </div>
+  </div>
+  <div class="payment-block-container">
+    <div class="header-container flex space-between">
+      <p class="text--xlarge">Payment Details</p>
+      <button mat-flat-button color="primary" class="button--tables rounded-button m-2">
+        Table 2
+      </button>
+    </div>
+    <div class="payment-component-container">
+      <ipos-payment></ipos-payment>
+    </div>
+  </div>
+</div>

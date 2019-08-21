@@ -12,6 +12,8 @@
 
     .cart-item-list-container {
       height: 70%;
+      max-height: 70%;
+      overflow: auto;
       .cart-item-container {
         min-height: 40px;
         border: 1px solid lightgrey;
@@ -49,6 +51,7 @@
 
     .cost-and-pay-container {
       min-height: 30%;
+
       .sub-cost-container {
         height: 40px;
         border: 1px solid lightgrey;
