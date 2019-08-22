@@ -1,12 +1,13 @@
 <div class="pay-container flex">
   <div class="cart-container">
-    <div class="header-container flex space-between">
-      <img src="assets/images/cart/back.svg" alt="Customer avatar" class="customer-avatar" />
-      <p class="text--xlarge flex">Billing <span class="order-count text--white text--mediumsecondary ml-1 text--numeric">03</span></p>
-      <span>&nbsp;</span>
+    <div class="header-container flex justify-start">
+      <img src="assets/images/cart/back.svg" alt="Customer avatar" class="customer-avatar cursor-pointer" [routerLink]="['/order']" />
+      <p class="text--bold text--left ml-2 text--grey">
+        Edit Cart
+      </p>
     </div>
     <div class="cart-component-container">
-      <ipos-cart [source]="'order'" [cartItemList]="this.cartItemList"></ipos-cart>
+      <ipos-cart [source]="'pay'" [cartItemList]="this.cartItemList"></ipos-cart>
     </div>
   </div>
   <div class="payment-block-container">

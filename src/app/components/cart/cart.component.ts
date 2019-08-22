@@ -12,11 +12,7 @@ export class CartComponent implements OnInit {
   @Input() source: string;
   @Input() cartItemList: SubItem[];
 
-  constructor(public dialog: MatDialog) {
-    setTimeout(() => {
-      this.openCustomersDialog();
-    }, 0);
-  }
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit() {}
 
@@ -28,7 +24,7 @@ export class CartComponent implements OnInit {
     cartItem.active = !activeStatus;
   }
 
-  openCustomersDialog(): void {
+  public openCustomersDialog(): void {
     this.dialog.open(CustomersComponent, {
       width: '800px'
     });

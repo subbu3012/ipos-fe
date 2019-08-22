@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SubItem, ORDER_CART_ITEM_LIST } from './../../app.model';
+import { SubItem, PAY_CART_ITEM_LIST } from './../../app.model';
 
 @Component({
   selector: 'ipos-pay',
@@ -7,7 +7,7 @@ import { SubItem, ORDER_CART_ITEM_LIST } from './../../app.model';
   styleUrls: ['./pay.component.scss']
 })
 export class PayComponent implements OnInit {
-  public cartItemList: SubItem[] = ORDER_CART_ITEM_LIST;
+  public cartItemList: SubItem[] = PAY_CART_ITEM_LIST;
 
   constructor() { }
 

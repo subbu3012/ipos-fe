@@ -11,7 +11,7 @@
         Name
       </p>
       <p class="text--grey text--normal text--bold width-25">
-        Phone
+        Phone/Address
       </p>
       <p class="text--grey text--normal text--bold width-25">
         Location
@@ -33,7 +33,7 @@
             {{ customer.location }}
           </p>
           <p class="text--grey text--normal text--bold width-25">
-            <button *ngIf="customer.active" class="btn btn-default m-2 spaced-letters text--medium">
+            <button *ngIf="customer.active" class="btn btn-default m-2 spaced-letters text--medium" (click)="this.closeDialog()">
               Select
             </button>
           </p>
