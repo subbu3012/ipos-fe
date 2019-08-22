@@ -1,0 +1,81 @@
+<div class="payment-container">
+  <div class="cash-container">
+    <div class="amount-container flex space-between">
+      <div class="order-amount-container">
+        <p class="text--grey text--normal text--bold">
+          Order Amount
+        </p>
+        <div class="text--red text--bold order-amount-container justify-start">
+          <p><span class="locale text--medium mr-2">AED</span> <span class="amount text--xxxlarge text--numeric">100.80</span></p>
+        </div>
+      </div>
+      <div class="change-due-container">
+        <p class="text--grey text--normal text--bold">
+          Change Due
+        </p>
+        <div class="text--green text--bold order-amount-container justify-end">
+          <p><span class="locale text--medium mr-2">AED</span> <span class="amount text--xxxlarge text--numeric">10.80</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="payment-methods-container mt-4">
+      <p class="text--grey text--normal text--bold">
+        Payment methods
+      </p>
+      <div class="methods-container flex width-100">
+        <div class="method-block width-25 text--center" *ngFor="let paymentMethod of this.paymentMethodList">
+          <div
+            class="method-info flex direction-column cursor-pointer"
+            [class.active]="paymentMethod.active"
+            (click)="this.paymentMethodClicked(paymentMethod)"
+            [class.background--primary]="paymentMethod.active"
+          >
+            <img
+              *ngIf="!paymentMethod.active"
+              [attr.src]="'assets/images/payment/' + paymentMethod.imagePath + '.svg'"
+              width="42"
+              height="28"
+              alt="payment method"
+            />
+            <img
+              *ngIf="paymentMethod.active"
+              [attr.src]="'assets/images/payment/' + paymentMethod.imagePath + '-active.svg'"
+              width="42"
+              height="28"
+              alt="payment method"
+            />
+            <p class="text--black text--medium mt-2" [class.text--white]="paymentMethod.active">{{ paymentMethod.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cash-info-container text--mediumsecondary text--grey mt-4">
+      <div class="cash-block flex">
+        <div class="info width-30 flex justify-start">
+          <img src="assets/images/payment/cash-sm.svg" width="27" height="17" alt="payment method" />
+          <p class="ml-4 text--primary text--bold">By Cash</p>
+        </div>
+        <div class="amount width-70 text--right text--numeric">
+          90.00
+        </div>
+      </div>
+
+      <div class="cash-block flex">
+        <div class="info width-30 flex justify-start">
+          <img src="assets/images/payment/card-sm.svg" width="27" height="17" alt="payment method" />
+          <p class="ml-4 text--primary text--bold">By Card</p>
+        </div>
+        <div class="amount width-70 text--right text--numeric">
+          30.00
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="action-container width-100">
+    <button mat-flat-button color="primary" class="button--pay rounded-button mt-4 width-100 text--bold" [routerLink]="['/order']">
+      <div class="space-between text--bold">
+        <p class="width-100 text--bold text--center">Complete Payment</p>
+      </div>
+    </button>
+  </div>
+</div>

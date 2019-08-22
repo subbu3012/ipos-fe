@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { OrderComponent } from './pages/order/order.component';
-import { BillingComponent } from './pages/billing/billing.component';
+import { PayComponent } from './pages/pay/pay.component';
 
 import { TablesComponent } from './dialogs/tables/tables.component';
 import { MainItemListComponent } from './components/main-item-list/main-item-list.component';
@@ -20,12 +21,13 @@ import { SubItemCardComponent } from './components/sub-item-card/sub-item-card.c
 import { SubItemsComponent } from './dialogs/sub-items/sub-items.component';
 
 import 'hammerjs';
+import { PaymentComponent } from './components/payment/payment.component';
+import { CustomersComponent } from './dialogs/customers/customers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrderComponent,
-    BillingComponent,
     TablesComponent,
     MainItemListComponent,
     MainItemCardComponent,
@@ -33,11 +35,14 @@ import 'hammerjs';
     CartComponent,
     SubItemListComponent,
     SubItemCardComponent,
-    SubItemsComponent
+    SubItemsComponent,
+    PayComponent,
+    PaymentComponent,
+    CustomersComponent
   ],
   imports: [BrowserModule, AppRoutingModule, MatButtonModule, MatDialogModule, MatIconModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [TablesComponent, SubItemsComponent]
+  entryComponents: [TablesComponent, SubItemsComponent, CustomersComponent]
 })
 export class AppModule {}

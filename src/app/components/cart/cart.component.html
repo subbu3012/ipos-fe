@@ -1,11 +1,21 @@
 <div class="cart-container">
   <div class="cart-details-container flex column-direction">
     <div class="cart-item-list-container width-100 text--mediumsecondary">
+      <div class="choose-customer-container" *ngIf="this.source == 'order'">
+        <button mat-flat-button color="primary" class="width-100" (click)="this.openCustomersDialog()">
+          <div class="flex text--bold justify-start">
+            <img src="assets/images/cart/customer.svg" alt="add" />
+            <p class="text--bold text--left ml-2">
+              Choose customer
+            </p>
+          </div>
+        </button>
+      </div>
       <div
         class="cart-item-container width-100 flex space-between"
         *ngFor="let cartItem of this.cartItemList"
-        (swipeleft)="cartItem.active = true"
-        (click)="this.cartItemClicked(cartItem)"
+        (swipeleft)="this.source != 'pay' && (cartItem.active = true)"
+        (click)="this.source != 'pay' && this.cartItemClicked(cartItem)"
         [class.item--active]="cartItem.active"
       >
         <div class="sub-item-info-container width-70" [class.width-60]="cartItem.active">
@@ -37,12 +47,12 @@
       [class.justify-end]="this.source == 'subItemDialog'"
     >
       <div class="cost-container width-100">
-        <div *ngIf="this.source == 'order'" class="sub-cost-container flex width-100 space-between">
+        <div *ngIf="this.source == 'order' || this.source == 'pay'" class="sub-cost-container flex width-100 space-between">
           <p class="width-70 text--bold text--primary text--bold">Sub Total</p>
           <p class="text--numeric">1</p>
           <p class="text--primary text--numeric">90.00</p>
         </div>
-        <div *ngIf="this.source == 'order'" class="sub-cost-container flex width-100 space-between">
+        <div *ngIf="this.source == 'order' || this.source == 'pay'" class="sub-cost-container flex width-100 space-between">
           <p class="width-70 text--bold">Vat Tax</p>
           <p class="text--numeric">12%</p>
           <p class="text--numeric">10.80</p>
@@ -50,9 +60,17 @@
       </div>
 
       <div class="pay-container width-100">
-        <button mat-flat-button color="primary" class="button--pay rounded-button mt-4 width-100">
+        <button
+          mat-stroked-button
+          color="primary"
+          class="button--pay rounded-button mt-4 width-100"
+          [class.primary]="this.source == 'order' || this.source == 'subItemDialog'"
+          [routerLink]="['/pay']"
+        >
           <div class="flex space-between text--bold">
-            <p class="text--bold text--left width-70" [class.width-60] = "this.source == 'subItemDialog'">{{ this.source == 'order' ? 'Pay Now' : 'Add' }}</p>
+            <p class="text--bold text--left width-70" [class.width-60]="this.source == 'subItemDialog'">
+              {{ this.source == 'order' || this.source == 'pay' ? 'Pay Now' : 'Add' }}
+            </p>
             <p class="text--bold">Total</p>
             <p class="text--bold text--numeric">100.80</p>
           </div>

@@ -4,7 +4,7 @@
 
   .cart-details-container {
     height: 100%;
-    padding: 24px 12px;
+    padding: 12px;
 
     .table tr {
       border: 1px solid #dee2e6;
@@ -12,6 +12,21 @@
 
     .cart-item-list-container {
       height: 70%;
+      max-height: 70%;
+      overflow: auto;
+
+      .choose-customer-container {
+        margin: 2px 0 12px 0;
+        button {
+          background: #ffffff;
+          border: 1.5px solid rgba(255, 0, 0, 0.38);
+          box-sizing: border-box;
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+          border-radius: 3px;
+          color: #9f0000;
+        }
+      }
+
       .cart-item-container {
         min-height: 40px;
         border: 1px solid lightgrey;
@@ -49,6 +64,7 @@
 
     .cost-and-pay-container {
       min-height: 30%;
+
       .sub-cost-container {
         height: 40px;
         border: 1px solid lightgrey;
@@ -67,10 +83,14 @@
       }
 
       .pay-container .button--pay {
-        background: linear-gradient(180deg, #ff0000 0%, #b80101 100%);
         border-radius: 5px !important;
         height: 48px;
         padding: 4px 20px;
+
+        &.primary {
+          color: #ffffff;
+          background: linear-gradient(180deg, #ff0000 0%, #b80101 100%);
+        }
       }
     }
   }

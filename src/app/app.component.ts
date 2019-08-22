@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'ipos-fe';
   public isSmallScreen: boolean = false;
   constructor(public breakpointObserver: BreakpointObserver) {
-    this.breakpointObserver.observe(['(max-width: 870px)']).subscribe((state: BreakpointState) => {
+    this.breakpointObserver.observe(['(max-width: 990px)']).subscribe((state: BreakpointState) => {
       this.isSmallScreen = state.matches;
     });
   }

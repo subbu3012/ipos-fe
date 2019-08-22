@@ -2,6 +2,10 @@
   width: 100%;
 }
 
+.width-80 {
+  width: 80%;
+}
+
 .width-75 {
   width: 75%;
 }
@@ -18,6 +22,26 @@
   width: 50%;
 }
 
+.width-33 {
+  width: 33.33%;
+}
+
+.width-35 {
+  width: 33.33%;
+}
+
+.width-30 {
+  width: 30%;
+}
+
+.width-25 {
+  width: 25%;
+}
+
+.width-20 {
+  width: 20%;
+}
+
 .height-100 {
   height: 100%;
 }
@@ -25,4 +49,8 @@
 .width-height-100 {
   width: 100%;
   height: 100%;
+}
+
+.no-border {
+  border: none !important;
 }
