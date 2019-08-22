@@ -14,7 +14,7 @@ export class SubItemsComponent implements OnInit {
 
   ngOnInit() {}
 
-  closeDialog() {
+  public closeDialog() {
     this.dialogRef.close();
   }
 }

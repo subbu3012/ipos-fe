@@ -13,7 +13,7 @@ export class CustomersComponent implements OnInit {
 
   ngOnInit() {}
 
-  closeDialog() {
+  public closeDialog() {
     this.dialogRef.close();
   }
 

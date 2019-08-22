@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginComponent } from './../../dialogs/login/login.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'ipos-navbar',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   public activeTab: string = 'dineIn';
-  constructor() {}
+
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit() {}
+
+  public openLoginDialog(): void {
+    this.dialog.open(LoginComponent, {
+      width: '470px'
+    });
+  }
 }

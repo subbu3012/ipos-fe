@@ -14,7 +14,7 @@ export class TablesComponent implements OnInit {
 
   ngOnInit() {}
 
-  closeDialog() {
+  public closeDialog() {
     this.dialogRef.close();
   }
 }

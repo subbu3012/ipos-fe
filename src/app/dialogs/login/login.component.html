@@ -1,0 +1,21 @@
+<div class="login-container text--center">
+  <p class="text--large text--primary text--bold">Customer Company Name</p>
+  <p class="text--mediumsecondary text--grey text--bold">Login to manage your store</p>
+  <div class="form-container">
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" />
+    </mat-form-field>
+  </div>
+  <button mat-flat-button color="primary" class="button--login rounded-button width-100 text--bold" (click)="this.closeDialog()">
+    <div class="space-between text--bold">
+      <p class="width-100 text--bold text--center">Login</p>
+    </div>
+  </button>
+  <p class="text--mediumsecondary text--grey text--bold mt-2">Forgot password?</p>
+  <img src="assets/images/navbar/ipos-login-logo.png" alt="Ipos Logo" height="80" class="ipos-logo mt-2" />
+</div>
