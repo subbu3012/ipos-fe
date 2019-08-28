@@ -91,7 +91,8 @@ p {
   }
 
   &--bold {
-    font-family: Raleway-semibold !important;
+    font-family: Raleway-SemiBold, Raleway !important;
+    font-weight: bold;
   }
 
   &--numeric {
