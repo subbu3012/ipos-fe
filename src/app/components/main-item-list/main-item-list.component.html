@@ -7,6 +7,7 @@
         class="rounded-button m-2 spaced-letters"
         (click)="this.activeMainCategory = mainItemCategory.id"
         [class.active]="this.activeMainCategory == mainItemCategory.id"
+        [disableRipple]="true"
       >
         <span class="text--bold">{{ mainItemCategory.name }}</span>
       </button>
