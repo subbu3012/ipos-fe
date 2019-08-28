@@ -31,14 +31,14 @@
             [class.background--primary]="paymentMethod.active"
           >
             <img
-              *ngIf="!paymentMethod.active"
+              [class.hide]="paymentMethod.active"
               [attr.src]="'assets/images/payment/' + paymentMethod.imagePath + '.svg'"
               width="42"
               height="28"
               alt="payment method"
             />
             <img
-              *ngIf="paymentMethod.active"
+              [class.hide]="!paymentMethod.active"
               [attr.src]="'assets/images/payment/' + paymentMethod.imagePath + '-active.svg'"
               width="42"
               height="28"

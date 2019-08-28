@@ -28,8 +28,8 @@
 
     .header-container {
       height: 56px;
-      padding: 0 24px;
       border-bottom: 1px solid lightgrey;
+      padding: 0 8%;
 
       .button--tables {
         background: rgba(255, 0, 0, 0.38);
@@ -39,7 +39,7 @@
 
     .payment-component-container {
       height: calc(100% - 56px);
-      padding: 24px;
+      padding: 12px 8%;
     }
   }
 

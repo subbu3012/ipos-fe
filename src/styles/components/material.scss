@@ -17,6 +17,15 @@ mat-icon {
   color: #000088;
 }
 
+.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-outline-gap {
+  border-top-color: initial !important;
+}
+
+.mat-form-field-appearance-outline.mat-form-field-can-float .mat-input-server:focus + .mat-form-field-label-wrapper .mat-form-field-label,
+.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-0.8em) scale(0.75) !important;
+}
+
 // .mat-progress-bar.mat-accent .mat-progress-bar-fill::after {
 //   background-color: #eb5821e0;
 // }
