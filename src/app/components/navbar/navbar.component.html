@@ -10,6 +10,7 @@
         class="rounded-button"
         (click)="this.activeTab = 'dineIn'"
         [class.active]="this.activeTab == 'dineIn'"
+        [disableRipple]="true"
       >
         Dine In
       </button>
@@ -19,6 +20,7 @@
         class="rounded-button"
         (click)="this.activeTab = 'delivery'"
         [class.active]="this.activeTab == 'delivery'"
+        [disableRipple]="true"
       >
         Delivery
       </button>
@@ -28,6 +30,7 @@
         class="rounded-button"
         (click)="this.activeTab = 'takeAway'"
         [class.active]="this.activeTab == 'takeAway'"
+        [disableRipple]="true"
       >
         Take Away
       </button>
@@ -37,6 +40,7 @@
         class="rounded-button"
         (click)="this.activeTab = 'sales'"
         [class.active]="this.activeTab == 'sales'"
+        [disableRipple]="true"
       >
         Sales
       </button>

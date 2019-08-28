@@ -26,6 +26,31 @@ mat-icon {
   transform: translateY(-0.8em) scale(0.75) !important;
 }
 
+.login-container {
+  .form-container {
+    .mat-form-field-wrapper {
+      padding: 0;
+    }
+    mat-form-field:first-child {
+      .mat-form-field-outline-start {
+        border-radius: 5px 0 0 0px;
+      }
+      .mat-form-field-outline-end {
+        border-radius: 0 5px 0px 0;
+      }
+    }
+
+    mat-form-field:last-child {
+      .mat-form-field-outline-start {
+        border-radius: 0px 0 0 5px;
+      }
+      .mat-form-field-outline-end {
+        border-radius: 0 0px 5px 0;
+      }
+    }
+  }
+}
+
 // .mat-progress-bar.mat-accent .mat-progress-bar-fill::after {
 //   background-color: #eb5821e0;
 // }

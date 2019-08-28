@@ -3,7 +3,7 @@
 .main-item-list {
   .category-container {
     button {
-      border: none;
+      border-color: transparent;
     }
     button.active {
       border: 1px solid $app-primary;
